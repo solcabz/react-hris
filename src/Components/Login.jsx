@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { User, Key, Eye, EyeSlash } from "@phosphor-icons/react";
 import PropTypes from "prop-types";
+import BGImage from "../assets/LoginBG.png";
 
 function Login({ onLogin }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -56,7 +57,7 @@ function Login({ onLogin }) {
       <div
         className="bg-center bg-no-repeat bg-cover h-screen w-screen p-0"
         style={{
-          backgroundImage: `url('/LoginBG.svg')`,
+          backgroundImage: `url(${BGImage})`,
         }}
       >
         <form

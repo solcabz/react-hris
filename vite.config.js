@@ -9,6 +9,7 @@ export default defineConfig({
       {
         find: "./runtimeConfig",
         replacement: "./runtimeConfig.browser",
+        "@": new URL("src", import.meta.url).pathname,
       },
     ],
   },
