@@ -56,7 +56,7 @@ function Login({ onLogin }) {
       <div
         className="bg-center bg-no-repeat bg-cover h-screen w-screen p-0"
         style={{
-          backgroundImage: `url('/LoginBG.png')`,
+          backgroundImage: `url('/LoginBG.svg')`,
         }}
       >
         <form
