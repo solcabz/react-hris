@@ -56,7 +56,7 @@ function Login({ onLogin }) {
       <div
         className="bg-center bg-no-repeat bg-cover h-screen w-screen p-0"
         style={{
-          backgroundImage: `url('./src/assets/LoginBG.png')`,
+          backgroundImage: `url('https://github.com/solcabz/react-hris/tree/main/src/assets/LoginBG.png')`,
         }}
       >
         <form
@@ -70,7 +70,7 @@ function Login({ onLogin }) {
             }}
           >
             <img
-              src="./src/assets/TNGCLogo.png"
+              src="https://github.com/solcabz/react-hris/tree/main/src/assets/TNGCLogo.png"
               alt="TNGC Logo"
               className="w-[110px] h-[120px]"
             />
