@@ -56,7 +56,7 @@ function Login({ onLogin }) {
       <div
         className="bg-center bg-no-repeat bg-cover h-screen w-screen p-0"
         style={{
-          backgroundImage: `url('../assets/LoginBG.svg')`,
+          backgroundImage: `url('./src/assets/LoginBG.png')`,
         }}
       >
         <form
@@ -70,7 +70,7 @@ function Login({ onLogin }) {
             }}
           >
             <img
-              src="../assets/TNGCLogo.png"
+              src="./src/assets/TNGCLogo.png"
               alt="TNGC Logo"
               className="w-[110px] h-[120px]"
             />
