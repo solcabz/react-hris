@@ -60,7 +60,7 @@ function Home() {
 
         {/* body */}
         <div
-          className="flex w-[1980] mt-2 gap-7 py-3 px-2 mb- overflow-x-auto"
+          className="flex w-[1980] mt-2 gap-7 p-3 mb- overflow-x-auto"
           style={containerStyles}
         >
           <div

@@ -53,7 +53,7 @@ function App() {
           path="/admin/*"
           element={
             user && getUserRole() === "admin" ? (
-              <div className="flex w-auto ">
+              <div className="flex w-auto">
                 {/* Admin Sidebar */}
                 <Sidebar />
                 <div className="p-4 flex-1 h-screen w-[1800px] overflow-x-auto">
@@ -85,9 +85,9 @@ function App() {
           path="/user/*"
           element={
             user && getUserRole() === "user" ? (
-              <div className="flex">
+              <div className="flex w-auto">
                 <UserSidebar />
-                <div className="p-7 font-semibold flex-1 h-screen items-center ">
+                <div className="p-4 flex-1 h-screen w-[1800px] overflow-x-auto">
                   <Routes>
                     <Route
                       index
