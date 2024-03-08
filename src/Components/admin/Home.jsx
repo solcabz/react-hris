@@ -4,9 +4,25 @@ import { Gear, Person, Clock } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
 function Home() {
+  // In your component's styles
+  const containerStyles = {
+    overflowY: "auto",
+    scrollbarColor: "#2B388C transparent", // Specify your desired color for the scrollbar
+    scrollbarWidth: "thin",
+    WebkitScrollbarTrack: {
+      borderRadius: "10px", // Adjust the border-radius to your preference
+    },
+    WebkitScrollbarThumb: {
+      background: "#2B388C", // Specify your desired color for the scrollbar thumb
+      borderRadius: "10px", // Adjust the border-radius to match the track
+    },
+    WebkitScrollbarButton: {
+      display: "none", // Hide the arrow buttons
+    },
+  };
   return (
     <>
-      <div className="">
+      <div className="w-full overflow-x-hidden">
         <div className="flex justify-between max-sm:flex-col-reverse gap-[15px] ">
           <div className="flex items-center text-costum-blue">
             <span className="mr-4">
@@ -43,7 +59,10 @@ function Home() {
         </div>
 
         {/* body */}
-        <div className="flex h-[480px] mt-2 gap-7 p-3">
+        <div
+          className="flex w-[1980] mt-2 gap-7 py-3 px-2 mb- overflow-x-auto"
+          style={containerStyles}
+        >
           <div
             className="w-[260px] rounded-2xl"
             style={{
@@ -54,7 +73,7 @@ function Home() {
               <Person size={16} />
               <span className="text-[16px]">Personal Request</span>
             </div>
-            <div className="flex justify-center w-[260px] items-center h-[395px] rounded-b-2xl  drop-shadow-xl shadow-gray-900 bg-white">
+            <div className="flex justify-center w-[260px] items-center h-[395px] rounded-b-2xl bg-white">
               <div className="h-[150px] w-[180px] bg-slate-900"></div>
             </div>
           </div>
@@ -70,7 +89,7 @@ function Home() {
               <span className="text-[16px]">Daily Time Record</span>
             </div>
 
-            <div className="flex justify-center w-[260px] items-center  h-[395px] rounded-b-2xl  drop-shadow-xl shadow-gray-900 bg-white">
+            <div className="flex justify-center w-[260px] items-center  h-[395px] rounded-b-2xl bg-white">
               <div className="h-[150px] w-[180px] bg-slate-900"></div>
             </div>
           </div>
@@ -85,20 +104,20 @@ function Home() {
               <Clock size={16} />
               <span className="text-[16px]">Employee Lookup</span>
             </div>
-            <div className="flex justify-center w-[462px] items-center h-[395px] rounded-b-2xl  drop-shadow-xl shadow-gray-900 bg-white">
+            <div className="flex justify-center w-[462px] items-center h-[395px] rounded-b-2xl bg-white">
               <div className="h-[150px] w-[180px] bg-slate-900"></div>
             </div>
           </div>
 
           <div className="flex flex-col gap-4 w-[260px] ">
             <div
-              className="h-[270px] flex py-[15px] text-white bg-white rounded-2xl items-center justify-center"
+              className="h-[270px] w-[260px] flex py-[15px] text-white bg-white rounded-2xl items-center justify-center"
               style={{
                 boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
               }}
             ></div>
             <div
-              className="h-[210px] flex py-[15px] text-white bg-white rounded-2xl items-center justify-center"
+              className="h-[210px] w-[260px] flex py-[15px] text-white bg-white rounded-2xl items-center justify-center"
               style={{
                 boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
               }}
