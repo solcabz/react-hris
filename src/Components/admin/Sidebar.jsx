@@ -109,14 +109,13 @@ function Sidebar() {
             className={` cursor-pointer transition duration-500`}
             alt="Logo"
           />
-          <div>
-            <h1
-              className={`text-white origin-left font-medium text-xl duration-300 ${
-                !open && "scale-0"
-              }`}
-            >
-              HRIS
-            </h1>
+          <div
+            className={`text-white origin-left font-medium duration-300 ${
+              !open && "scale-0"
+            }`}
+          >
+            <h1>Sol cabreza</h1>
+            <span>Frontend Developer</span>
           </div>
         </div>
         <div className="text-white pt-6 ">
