@@ -127,7 +127,7 @@ function Sidebar() {
             <span className="text-2xl">
               <Chalkboard />
             </span>
-            <span className={`${!open && "scale-0, hidden"} `}>
+            <span className={`${!open && "scale-0, hidden"} text-sm`}>
               Admin Dashboard
             </span>
           </Link>
