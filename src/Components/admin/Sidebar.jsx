@@ -90,8 +90,8 @@ function Sidebar() {
   return (
     <div
       className={`${
-        open ? "w-72" : "w-24"
-      } duration-300 p-6 pt-8 bg-costum-blue h-screen relative flex flex-col justify-between`}
+        open ? "w-72 h-screen" : "w-24"
+      } duration-300 p-6 pt-8 bg-costum-blue relative flex flex-col justify-between max-sm:p-2`}
     >
       <div>
         <img
@@ -138,7 +138,7 @@ function Sidebar() {
             {Menus.map((menu, index) => (
               <React.Fragment key={index}>
                 <li
-                  className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-3 hover:bg-blue-950 rounded-xl mt-2 `}
+                  className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-3 hover:bg-blue-950 rounded-xl mt-2 max-sm:text-sm[12px],gap-[15px]`}
                   onClick={() => {
                     if (menu.submenu) {
                       toggleSubmenu(index);
@@ -195,7 +195,7 @@ function Sidebar() {
         <div
           className={`flex flex-col ${!open && "scale-0, hidden"} duration-300`}
         >
-          <span className="text-m block  text-white">
+          <span className="text-sm block  text-white max-sm:text-[12px]">
             {date.toLocaleDateString(undefined, {
               weekday: "long",
               month: "long",
@@ -203,11 +203,11 @@ function Sidebar() {
               year: "numeric",
             })}
           </span>
-          <span className="text-m block text-white">
+          <span className="text-sm block text-white max-sm:text-[12px]">
             {date.toLocaleTimeString()}
           </span>
         </div>
-        <div className="p-4 bg-white rounded-md cursor-pointer">
+        <div className="p-2.5 bg-white h-[36px] w-[36px] align-middle justify-center rounded-md cursor-pointer">
           <Heart className="fill-costum-blue " />
         </div>
       </div>

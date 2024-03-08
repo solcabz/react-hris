@@ -1,5 +1,11 @@
+import Calendar from "../Tools/Calendar/Calendar";
+
 function Dailytimerecord() {
-  return <div>Dailytimerecord PAge</div>;
+  return (
+    <>
+      <Calendar />
+    </>
+  );
 }
 
 export default Dailytimerecord;

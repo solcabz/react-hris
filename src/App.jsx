@@ -53,10 +53,10 @@ function App() {
           path="/admin/*"
           element={
             user && getUserRole() === "admin" ? (
-              <div className="flex">
+              <div className="flex w-screen  ">
                 {/* Admin Sidebar */}
                 <Sidebar />
-                <div className="p-7 text-2xl font-semibold flex-1 h-screen">
+                <div className="p-4 flex justify-center items-center font-semibold flex-1 h-screen w-auto max-sm:p-2">
                   <Routes>
                     <Route index element={<Home />} />
                     <Route
@@ -87,7 +87,7 @@ function App() {
             user && getUserRole() === "user" ? (
               <div className="flex">
                 <UserSidebar />
-                <div className="p-7 text-2xl font-semibold flex-1 h-screen">
+                <div className="p-7 font-semibold flex-1 h-screen  items-center max-sm:p-2 ">
                   <Routes>
                     <Route
                       index

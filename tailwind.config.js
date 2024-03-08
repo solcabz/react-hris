@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "costum-blue": "#2b3991",
+        "costum-blue": "#2B3991",
+        "hover-active": "#2B388C",
       },
     },
   },
