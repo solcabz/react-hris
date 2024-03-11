@@ -53,7 +53,7 @@ function Home() {
             </div>
 
             {/* bodyContext */}
-            <div className="flex flex-col justify-around items-center px-4 w-[260px] h-[395px] rounded-b-2xl bg-white">
+            <div className="flex flex-col justify-around items-center px-4 w-[260px] h-[430px] rounded-b-2xl bg-white">
               {/* 1st layer */}
               <div className=" w-[180px]">
                 <a className="flex w-full p-2 justify-start items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
@@ -76,7 +76,26 @@ function Home() {
                   <span>4 Applicants</span>
                   <span>6 Requests</span>
                 </div>
-                <div className="h-[150px] w-[180px] mt-2 bg-slate-900"></div>
+                <div className="flex flex-col gap-2 w-[180px] mt-2">
+                  <div className=" w-[180px]">
+                    <div className="bg-violet-100 h-[43px] rounded-t-lg p-2">
+                      <span className="text-[12px]">Web dev</span>
+                    </div>
+                    <div className="bg-costum-blue h-[43px] rounded-b-lg p-2">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div className=" w-[180px]">
+                    <div className="bg-violet-100 h-[43px] rounded-t-lg p-2">
+                      <span className="text-[12px]">Data Admin</span>
+                    </div>
+                    <div className="bg-costum-blue h-[43px] rounded-b-lg p-2">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
                 <div className="text-[10px] flex justify-end items-center p-2 cursor-pointer text-costum-blue hover:text-hover-active">
                   <FIcon.ChevronsRight size={16} />
                   <Link to={"/admin/reports/201files"}>
