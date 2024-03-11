@@ -1,3 +1,4 @@
+// Import necessary modules and components
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Components/admin/Home/Home.jsx";
@@ -10,6 +11,7 @@ import Sidebar from "./Components/admin/Sidebar.jsx";
 import UserHome from "./Components/user/Home";
 import UserSidebar from "./Components/user/Sidebar.jsx";
 
+// App component
 function App() {
   const storedUser = localStorage.getItem("user");
   const [user, setUser] = useState(storedUser ? JSON.parse(storedUser) : null);
@@ -108,4 +110,5 @@ function App() {
   );
 }
 
+// Export the App component as the default export
 export default App;
