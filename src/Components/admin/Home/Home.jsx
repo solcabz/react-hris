@@ -1,6 +1,7 @@
 import * as Icon from "@phosphor-icons/react";
-import Breadcrumbs from "../Tools/Breadcrumbs";
-import HeaderUser from "../Tools/HeaderUser";
+import * as FIcon from "feather-icons-react";
+import Breadcrumbs from "../../Tools/Breadcrumbs";
+import HeaderUser from "../../Tools/HeaderUser";
 
 function Home() {
   // In your component's styles
@@ -47,8 +48,24 @@ function Home() {
               <Icon.Person size={16} />
               <span className="text-[16px]">Personal Request</span>
             </div>
-            <div className="flex justify-center w-[260px] items-center h-[395px] rounded-b-2xl bg-white">
-              <div className="h-[150px] w-[180px] bg-slate-900"></div>
+            <div className="flex justify-center items-center px-4 w-[260px] h-[395px] rounded-b-2xl bg-white">
+              <div className="">
+                <a className="flex w-full p-2 justify-center items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
+                  <Icon.Plus className="border border-costum-blue" size={18} />
+                  <span>Add Employee </span>
+                </a>
+                <a className="flex w-full p-2 justify-start items-center gap-2 cursor-pointer text-costum-blue  border-b border-costum-blue">
+                  <FIcon.UserPlus className="" size={18} />
+                  <span>My Requests </span>
+                </a>
+                <div className="text-[10px] flex flex-col cursor-pointer text-costum-blue font-semibold">
+                  <span className="p-1">4 Applicants</span>
+                  <span className="px-1">2 pending Requests</span>
+                </div>
+              </div>
+
+              <span></span>
+              <span></span>
             </div>
           </div>
 

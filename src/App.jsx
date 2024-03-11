@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./Components/admin/Home";
+import Home from "./Components/admin/Home/Home.jsx";
 import Jobinfo from "./Components/admin/Jobinfo";
 import Personarequest from "./Components/admin/Personarequest";
 import Dailytimerecord from "./Components/admin/Dailytimerecord.jsx";
