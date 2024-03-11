@@ -29,7 +29,7 @@ function Home() {
         <div className="flex justify-between max-sm:flex-col-reverse gap-[15px] ">
           <div className="flex justify-center items-center text-costum-blue">
             <span className="mr-4">
-              <Icon.Chalkboard />
+              <Icon.Chalkboard size={24} />
             </span>
             <Breadcrumbs className="max-sm:text-xs text-[21px]" />
           </div>
@@ -78,21 +78,21 @@ function Home() {
                   <span>4 Applicants</span>
                   <span>6 Requests</span>
                 </div>
-                <div className="flex flex-col gap-2 w-[180px] mt-2">
+                <div className="flex flex-col gap-2 w-[180px] mt-2 text-white">
                   <div className=" w-[180px]">
-                    <div className="bg-violet-100 h-[43px] rounded-t-lg p-2">
+                    <div className="bg-blue-code h-[43px] rounded-t-lg p-2">
                       <span className="text-[12px]">Web dev</span>
                     </div>
-                    <div className="bg-costum-blue h-[43px] rounded-b-lg p-2">
+                    <div className="bg-under-code h-[43px] rounded-b-lg p-2">
                       <span></span>
                       <span></span>
                     </div>
                   </div>
                   <div className=" w-[180px]">
-                    <div className="bg-violet-100 h-[43px] rounded-t-lg p-2">
+                    <div className="bg-blue-code h-[43px] rounded-t-lg p-2">
                       <span className="text-[12px]">Data Admin</span>
                     </div>
-                    <div className="bg-costum-blue h-[43px] rounded-b-lg p-2">
+                    <div className="bg-under-code h-[43px] rounded-b-lg p-2">
                       <span></span>
                       <span></span>
                     </div>

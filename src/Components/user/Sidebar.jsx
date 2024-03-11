@@ -82,13 +82,13 @@ function Sidebar() {
     <div
       className={`${
         open ? "w-72" : "w-24"
-      } duration-300 p-6 pt-8 bg-blue-600 h-screen relative flex flex-col justify-between`}
+      } duration-300 p-6 pt-8 bg-light-blue h-screen relative flex flex-col justify-between`}
     >
       <div>
         <img
           src={Left}
           alt="./src/assets/chevrons-left.png"
-          className={`absolute cursor-pointer -right-3 top-9 w-7 h-7 border-2 border-white bg-blue-500 rounded-lg duration-300 ${
+          className={`absolute cursor-pointer -right-3 top-9 w-7 h-7 border-2 border-white bg-light-blue rounded-lg duration-300 ${
             !open && "rotate-180"
           }`}
           onClick={() => setOpen(!open)}
@@ -113,7 +113,7 @@ function Sidebar() {
         <div className="text-white pt-6 ">
           <Link
             to=""
-            className="flex gap-x-4 items-center cursor-pointer p-3 shadow shadow-gray-900 hover:bg-blue-500 rounded-xl duration-200"
+            className="flex gap-x-4 items-center cursor-pointer p-3 shadow shadow-gray-900 hover:bg-light-blue rounded-xl duration-200"
           >
             <span className="text-2xl">
               <Icon.Chalkboard />
@@ -129,7 +129,7 @@ function Sidebar() {
             {Menus.map((menu, index) => (
               <React.Fragment key={index}>
                 <li
-                  className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-3 hover:bg-blue-500 rounded-xl mt-2 `}
+                  className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-3 hover:bg-light-blue rounded-xl mt-2 `}
                   onClick={() => {
                     if (menu.submenu) {
                       toggleSubmenu(index);
@@ -163,7 +163,7 @@ function Sidebar() {
                     {menu.submenuItems.map((submenuItem, subIndex) => (
                       <li
                         key={`${index}-${subIndex}`}
-                        className={`text-white text-sm flex items-center gap-x-4 cursor-pointer  hover:bg-blue-500 rounded-xl mt-2`}
+                        className={`text-white text-sm flex items-center gap-x-4 cursor-pointer  hover:bg-light-blue rounded-xl mt-2`}
                       >
                         <Link to={submenuItem.link} className="p-2 px-6 w-full">
                           {submenuItem.title}
@@ -200,7 +200,7 @@ function Sidebar() {
           </span>
         </div>
         <div className="p-4 bg-white rounded-md cursor-pointer">
-          <Icon.Heart className="fill-blue-500 " />
+          <Icon.Heart className="fill-light-blue " />
         </div>
       </div>
     </div>
