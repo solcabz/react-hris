@@ -55,8 +55,8 @@ function Home() {
             {/* bodyContext */}
             <div className="flex flex-col justify-around items-center px-4 w-[260px] h-[395px] rounded-b-2xl bg-white">
               {/* 1st layer */}
-              <div className="p-2">
-                <a className="flex w-full p-2 justify-center items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
+              <div className=" w-[180px]">
+                <a className="flex w-full p-2 justify-start items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
                   <Icon.Plus className="border border-costum-blue" size={18} />
                   <span>Add Employee </span>
                 </a>
@@ -76,7 +76,7 @@ function Home() {
                   <span>4 Applicants</span>
                   <span>6 Requests</span>
                 </div>
-                <div className="h-[150px] w-[180px] m t-2 bg-slate-900"></div>
+                <div className="h-[150px] w-[180px] mt-2 bg-slate-900"></div>
                 <div className="text-[10px] flex justify-end items-center p-2 cursor-pointer text-costum-blue hover:text-hover-active">
                   <FIcon.ChevronsRight size={16} />
                   <Link to={"/admin/reports/201files"}>

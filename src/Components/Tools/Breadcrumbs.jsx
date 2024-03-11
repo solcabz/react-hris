@@ -5,7 +5,7 @@ const Breadcrumbs = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="text-blue-500 my-4">
+    <nav className="text-costum-blue hover:text-hover-active font-bold   my-4">
       <ul className="flex cursor-pointer">
         {pathnames.map((value, index) => {
           const name = value.toUpperCase();
