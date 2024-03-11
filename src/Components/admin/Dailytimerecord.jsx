@@ -16,7 +16,6 @@ function Dailytimerecord() {
         </div>
         <HeaderUser />
       </div>
-
       <Calendar />
     </>
   );
