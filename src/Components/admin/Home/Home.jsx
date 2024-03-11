@@ -2,6 +2,7 @@ import * as Icon from "@phosphor-icons/react";
 import * as FIcon from "feather-icons-react";
 import Breadcrumbs from "../../Tools/Breadcrumbs";
 import HeaderUser from "../../Tools/HeaderUser";
+import Search from "../../Tools/Search";
 
 import { Link } from "react-router-dom";
 
@@ -40,6 +41,7 @@ function Home() {
           className="flex w-[1980] mt-2 gap-7 p-3 mb- overflow-x-auto"
           style={containerStyles}
         >
+          {/* personal request */}
           <div
             className="w-[260px] rounded-2xl"
             style={{
@@ -106,6 +108,7 @@ function Home() {
             </div>
           </div>
 
+          {/* daily time record  */}
           <div
             className="w-[260px] rounded-2xl"
             style={{
@@ -117,11 +120,15 @@ function Home() {
               <span className="text-[16px]">Daily Time Record</span>
             </div>
 
-            <div className="flex justify-center w-[260px] items-center  h-[395px] rounded-b-2xl bg-white">
-              <div className="h-[150px] w-[180px] bg-slate-900"></div>
+            <div className="flex flex-col justify-around w-[260px] items-center  h-[430 px] rounded-b-2xl bg-white mt-3">
+              <div className="flex w-[180px] p-2 justify-center items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
+                <span> 4 Pending Requests</span>
+              </div>
+              <div className="h-[150px] w-[180px] bg-slate-900 mt-2"></div>
             </div>
           </div>
 
+          {/* employee lookup */}
           <div
             className="w-[462px] rounded-2xl"
             style={{
@@ -132,12 +139,14 @@ function Home() {
               <Icon.Clock size={16} />
               <span className="text-[16px]">Employee Lookup</span>
             </div>
-            <div className="flex justify-center w-[462px] items-center h-[395px] rounded-b-2xl bg-white">
+            <div className="flex flex-col justify-start w-[462px] items-center h-[395px] rounded-b-2xl bg-white p-2">
+              <Search className="" />
               <div className="h-[150px] w-[180px] bg-slate-900"></div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 w-[260px] ">
+          {/* extras */}
+          <div className="flex flex-col gap-4 w-[260px] p-2">
             <div
               className="h-[270px] w-[260px] flex py-[15px] text-white bg-white rounded-2xl items-center justify-center"
               style={{
