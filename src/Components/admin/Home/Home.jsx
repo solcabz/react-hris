@@ -3,6 +3,8 @@ import * as FIcon from "feather-icons-react";
 import Breadcrumbs from "../../Tools/Breadcrumbs";
 import HeaderUser from "../../Tools/HeaderUser";
 
+import { Link } from "react-router-dom";
+
 function Home() {
   // In your component's styles
   const containerStyles = {
@@ -44,12 +46,16 @@ function Home() {
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
             }}
           >
+            {/* header */}
             <div className="flex py-[15px] text-white bg-costum-blue rounded-t-2xl items-center justify-center gap-4">
               <Icon.Person size={16} />
               <span className="text-[16px]">Personal Request</span>
             </div>
-            <div className="flex justify-center items-center px-4 w-[260px] h-[395px] rounded-b-2xl bg-white">
-              <div className="">
+
+            {/* bodyContext */}
+            <div className="flex flex-col justify-around items-center px-4 w-[260px] h-[395px] rounded-b-2xl bg-white">
+              {/* 1st layer */}
+              <div className="p-2">
                 <a className="flex w-full p-2 justify-center items-center gap-2 cursor-pointer text-costum-blue border-b border-costum-blue">
                   <Icon.Plus className="border border-costum-blue" size={18} />
                   <span>Add Employee </span>
@@ -64,8 +70,20 @@ function Home() {
                 </div>
               </div>
 
-              <span></span>
-              <span></span>
+              {/* 2nd layer */}
+              <div className="p-2 ">
+                <div className="flex text-[10px] cursor-pointer gap-12 justify-evenly  text-costum-blue border-b border-costum-blue">
+                  <span>4 Applicants</span>
+                  <span>6 Requests</span>
+                </div>
+                <div className="h-[150px] w-[180px] m t-2 bg-slate-900"></div>
+                <div className="text-[10px] flex justify-end items-center p-2 cursor-pointer text-costum-blue hover:text-hover-active">
+                  <FIcon.ChevronsRight size={16} />
+                  <Link to={"/admin/reports/201files"}>
+                    View Personal Request
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
