@@ -84,7 +84,7 @@ function App() {
           }
         />
         <Route
-          path="/user/*"
+          path="/user"
           element={
             user && getUserRole() === "user" ? (
               <div className="flex w-auto">
