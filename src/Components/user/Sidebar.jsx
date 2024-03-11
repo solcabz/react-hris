@@ -119,7 +119,7 @@ function Sidebar() {
               <Icon.Chalkboard />
             </span>
             <span className={`${!open && "scale-0, hidden"} `}>
-              Admin Dashboard
+              My Dashboard
             </span>
           </Link>
         </div>
@@ -150,6 +150,7 @@ function Sidebar() {
                   </span>
                   {menu.submenu && open && (
                     <Icon.CaretDown
+                      fill="white"
                       className={` ${
                         submenuOpen[index] && "duration-300 rotate-180"
                       }`}
