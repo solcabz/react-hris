@@ -2,61 +2,52 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LogoHorizontal from "../../assets/LogoHorizontal.png";
 import Left from "../../assets/chevrons-left.png";
-import {
-  AddressBook,
-  NewspaperClipping,
-  Gear,
-  ListPlus,
-  Heart,
-  Chalkboard,
-  CaretDown,
-} from "@phosphor-icons/react";
+import * as Icon from "@phosphor-icons/react";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
 
   const Menus = [
     {
-      title: "Manage",
+      title: "Workspace",
+      icon: <Icon.House />,
       submenu: true,
       submenuItems: [
         {
-          title: "Persona Request",
-          link: "manage/personarequest",
+          title: "Memos & Activity Log",
+          link: "workspace/activitylog",
         },
         {
-          title: "Daily Time Record",
-          link: "manage/dailytimerecord",
+          title: "Members",
+          link: "workspace/members",
         },
-        { title: "Job Info", link: "manage/jobinfo" },
+        { title: "Calendar", link: "workspace/calendar" },
+        { title: "Payslip", link: "workspace/payslip" },
       ],
     },
     {
-      title: "Reports",
-      icon: <NewspaperClipping />,
+      title: "My Account",
+      icon: <Icon.UserCircle />,
       submenu: true,
       submenuItems: [
-        { title: "201 Files", link: "reports/201files" },
-        { title: "Retention Report", link: "reports/retentionreport" },
+        { title: "Personal Information", link: "reports/personalInfo" },
+        {
+          title: "Background & Education",
+          link: "reports/backgroundeducation",
+        },
+        { title: "Benefits", link: "reports/benefits" },
       ],
     },
     {
-      title: "Database Tables",
-      icon: <ListPlus />,
+      title: "Questionaries",
+      icon: <Icon.Question />,
       submenu: true,
       submenuItems: [
-        { title: "Profile", link: "databasetable/profile" },
-        { title: "Management", link: "databasetable/management" },
-        { title: "Upkeep", link: "databasetable/upkeep" },
-      ],
-    },
-    {
-      title: "System Settings",
-      icon: <Gear />,
-      submenu: true,
-      submenuItems: [
-        { title: "System Access", link: "settings/systemaccess" },
-        { title: "User List", link: "settings/userlist" },
+        { title: "Personality Test", link: "databasetable/personalitytest" },
+        {
+          title: "Employee Evaluation Index",
+          link: "databasetable/evalutaion",
+        },
       ],
     },
   ];
@@ -91,7 +82,7 @@ function Sidebar() {
     <div
       className={`${
         open ? "w-72" : "w-24"
-      } duration-300 p-6 pt-8 bg-blue-500 h-screen relative flex flex-col justify-between`}
+      } duration-300 p-6 pt-8 bg-blue-600 h-screen relative flex flex-col justify-between`}
     >
       <div>
         <img
@@ -125,7 +116,7 @@ function Sidebar() {
             className="flex gap-x-4 items-center cursor-pointer p-3 shadow shadow-gray-900 hover:bg-blue-500 rounded-xl duration-200"
           >
             <span className="text-2xl">
-              <Chalkboard />
+              <Icon.Chalkboard />
             </span>
             <span className={`${!open && "scale-0, hidden"} `}>
               Admin Dashboard
@@ -148,7 +139,7 @@ function Sidebar() {
                   }}
                 >
                   <span className="text-2xl block float-left mr-4">
-                    {menu.icon ? menu.icon : <AddressBook />}
+                    {menu.icon ? menu.icon : <Icon.AddressBook />}
                   </span>
                   <span
                     className={`text-base font-medium origin-left flex-1 duration-200 ${
@@ -158,7 +149,7 @@ function Sidebar() {
                     <Link to={menu.link}>{menu.title}</Link>
                   </span>
                   {menu.submenu && open && (
-                    <CaretDown
+                    <Icon.CaretDown
                       className={` ${
                         submenuOpen[index] && "duration-300 rotate-180"
                       }`}
@@ -208,7 +199,7 @@ function Sidebar() {
           </span>
         </div>
         <div className="p-4 bg-white rounded-md cursor-pointer">
-          <Heart className="fill-blue-500 " />
+          <Icon.Heart className="fill-blue-500 " />
         </div>
       </div>
     </div>
