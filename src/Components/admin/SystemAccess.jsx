@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import * as Icon from "@phosphor-icons/react";
+import Breadcrumbs from "../Tools/Breadcrumbs";
+import HeaderUser from "../Tools/HeaderUser";
 import PropTypes from "prop-types";
 
 function SystemAccess({ onLogout }) {
@@ -13,11 +16,21 @@ function SystemAccess({ onLogout }) {
 
   return (
     <div>
-      <h2>System Access</h2>
+      <div className="flex justify-between max-sm:flex-col-reverse gap-[15px] ">
+        <div className="flex justify-center items-center text-costum-blue">
+          <span className="mr-4">
+            <Icon.Chalkboard />
+          </span>
+          <Breadcrumbs className="max-sm:text-xs text-[21px]" />
+        </div>
+        <HeaderUser />
+      </div>
       {/* Other content related to System Access */}
 
       {/* Logout button */}
-      <button onClick={handleLogout}>Logout</button>
+      <div>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
     </div>
   );
 }

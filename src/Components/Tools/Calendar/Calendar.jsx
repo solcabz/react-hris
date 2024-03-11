@@ -21,7 +21,7 @@ function Calendar() {
 
   return (
     <>
-      <div className="flex justify-center div-x-2 gap-10 h-screen items-center">
+      <div className="flex justify-center div-x-2 gap-10 pt-[80px] items-center">
         {/* schedule */}
         <div className="h-96 w-96 pt-2">
           <h1 className="text-[21px] text-hover-active  ">
