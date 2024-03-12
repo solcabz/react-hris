@@ -31,7 +31,7 @@ function Home() {
             <span className="mr-4">
               <Icon.Chalkboard size={24} />
             </span>
-            <Breadcrumbs className="max-sm:text-xs text-[21px] text-costum-blue hover:text-hover-active" />
+            <Breadcrumbs className="max-sm:text-xs text-[21px] text-costum-blue bg-hover-active" />
           </div>
           <HeaderUser />
         </div>
